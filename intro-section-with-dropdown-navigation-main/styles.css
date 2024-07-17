@@ -1,0 +1,184 @@
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url(./Epilogue/Epilogue-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "Epilogue";
+  background-color: var(--Almost-White);
+  color: var(--Almost-Black);
+  font-size: 18px;
+}
+
+button {
+  background-color: var(--Almost-White);
+  border: none;
+  cursor: pointer;
+  color: var(--Medium-Gray);
+  /*LOS BOTONES HAY QUE DEFINIRLOS XQ NO TOMAN LO DEL BODY*/
+  font-size: 1em;
+  /*toma como referencia lo definido en el body*/
+  font-family: "Epilogue";
+}
+
+header {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  /*centro la burger que se habia estirado con el display:flex*/
+  justify-content: space-between;
+  margin: 16px 16px 24px;
+
+  & .hamburger-menu {
+    display: none;
+  }
+
+  & nav {
+    display: none;
+    border: 1px solid green;
+    color: var(--Medium-Gray);
+
+    & .back {
+      background-color: var(--Medium-Gray);
+      /*opacity: 0.75;*/
+      position: absolute;
+      /*para que se salga de su padre y ocupe todo*/
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 780px;
+    }
+
+    & .front {
+      background-color: var(--Almost-White);
+      width: 240px;
+      position: absolute;
+      right: 0;
+      height: 780px;
+      padding: 20px;
+    }
+
+    & .close-img-container {
+      text-align: right;
+      /*al usar un contenedor para la img puede moverla como si fuera texto*/
+      cursor: pointer;
+    }
+
+    & li {
+      list-style: none;
+      cursor: pointer;
+      margin-bottom: 26px;
+    }
+
+    & .features-ul, .company-ul {
+      margin-left: 28px;
+    }
+
+    & .submenu-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 24px 0;
+      width: 110px;
+      height: 26px;
+    }
+
+    & .btns-container {
+      position: absolute;
+      /*para egarlo abajo*/
+      bottom: 124px;
+    }
+
+    & .login-btn {
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    & .register-btn {
+      border: 1px solid var(--Almost-Black);
+      width: 195px;
+      height: 42px;
+      border-radius: 14px;
+
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+
+  & h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  & p {
+    text-align: center;
+    line-height: 26px;
+    color: var(--Medium-Gray);
+    margin: 0 16px 24px;
+    font-size: 1rem;
+    /*hace refernecia al root y por defcto es de 16px / 1em=18px en body entonces para 16px seria => 16/18 seria 0.86em*/
+  }
+
+  & button {
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    width: 136px;
+    height: 48px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 52px;
+
+    &:hover {
+      background-color: var(--Almost-White);
+      color: var(--Almost-Black);
+      border: 1px solid var(--Almost-Black);
+    }
+  }
+
+  & .logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;  
+    margin-bottom: 96px;
+  }
+
+  & .databiz {
+    width: 81px;
+    ;
+  }
+
+  & .audio {
+    width: 52px;
+  }
+
+  & .meet {
+    width: 64px;
+  }
+
+  & .maker {
+    width: 59px;
+  }
+
+  & .hero-image {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
