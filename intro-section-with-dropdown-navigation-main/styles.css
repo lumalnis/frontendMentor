@@ -57,7 +57,7 @@ header {
       left: 0;
       top: 0;
       width: 100%;
-      height: 780px;
+      height: 100%;
     }
 
     & .front {
@@ -66,7 +66,7 @@ header {
       position: absolute;
       right: 0;
       top: 0;
-      height: 780px;
+      height: 100%;
       padding: 20px;
     }
 
@@ -85,6 +85,10 @@ header {
     & .features-ul, .company-ul {
       margin-left: 28px;
       display: none;
+    }
+
+    & .features-ul span {
+      padding-left: 8px;
     }
 
     & .submenu-btn {
@@ -123,7 +127,7 @@ main {
 
   & h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 2em;
     margin-bottom: 16px;
   }
 
@@ -163,7 +167,6 @@ main {
 
   & .databiz {
     width: 81px;
-    ;
   }
 
   & .audio {
@@ -183,6 +186,18 @@ main {
     margin-bottom: 48px;
   }
 }
+
+.attribution {
+  font-size: 0.7em;
+  text-align: center;
+  margin: 0 24px 24px;
+
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 
 @media (min-width: 768px) {
   header {
@@ -235,6 +250,44 @@ main {
         width: 182px;
       }
 
+      & .features-ul, .company-ul {
+        width: 153px;
+        position: absolute;
+        top: 35px;
+        background-color: var(--Almost-White);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        padding: 18px 24px;
+        font-size: 0.875em;
+
+        & li {
+          margin-bottom: 16px;
+          left: 50px;
+        }
+      }
+
+      & .features-ul-container {
+        position: relative;
+        /*al ser relativo hace caso a su padre que es absoluto .features-ul*/
+      }
+
+      & .company-ul-container {
+        position: relative;
+      }
+
+      & .features-ul {
+        left: -35px;      
+        height: 170px;}
+
+      & .company-ul {
+        left: -35px;
+        height: 130px;
+      }
+
+      & #features-btn, #company-btn {
+        width: 100px;
+      }
+
       & .register-btn {
         width: 104px;
       }
@@ -243,26 +296,73 @@ main {
         margin: 0;
       }
     }
-
-
   }
 
   main {
-    flex-direction: row;
-    margin-top: 100px;
 
     & h2 {
-      font-size: 42px;
+      font-size: 2.33em;
+    }
+
+    & p {
+      width: 600px;
+      margin: 40px;
+    }
+
+    & button {
+      width: 163px;
+      height: 56px;
+      font-size: 1em;
+      margin-bottom: 46px;
     }
 
     & picture {
       width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  header {
+    margin: 21px 80px 67px;
+
+    & nav {
+      margin-left: 48px;
     }
   }
 
-    
+  main {
+    flex-direction: row;
+    margin: 0 180px 20px 165px;
+    justify-content: space-between;
+
+    & picture {
+      width: 400px;
+      margin: 0;
+    }
+
+    & h2 {
+      text-align: left;
+      font-size: 4.5em;
+      margin: 100px 0 48px;
+      width: 549px;
+    }
+
+    & p {
+      text-align: left;
+      font-size: 1em;
+      width: 445px;
+      font-weight: 500;
+      margin: 0 0 25px;
+    }
+
+    & button {
+      margin: 0 0 116px;
+    }
+
   }
-
-
 
 }
